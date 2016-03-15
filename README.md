@@ -6,6 +6,8 @@
 
 Skype name validation module for Angular.js (`^1.2`).
 
+> —» [DEMO][demo] «—
+
 
 ## Features
 
@@ -148,3 +150,4 @@ THE SOFTWARE.
   [new-issue]: https://github.com/betsol/ng-skype-name/issues/new
   [gulp]:      http://gulpjs.com/
   [repo-gh]:   https://github.com/betsol/ng-skype-name
+  [demo]:      http://betsol.github.io/ng-skype-name/

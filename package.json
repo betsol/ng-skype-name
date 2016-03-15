@@ -1,7 +1,7 @@
 {
   "name": "betsol-ng-skype-name",
   "description": "Skype name validation for Angular.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/betsol/ng-skype-name",
   "license": "MIT",
   "main": "index.js",

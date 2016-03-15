@@ -1,6 +1,6 @@
 /**
  * betsol-ng-skype-name - Skype name validation for Angular.js
- * @version v1.0.0
+ * @version v1.0.1
  * @link https://github.com/betsol/ng-skype-name
  * @license MIT
  *
