@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="betsol.skypeName.test">
+
+<head>
+    <title>betsol-ng-skype-name demo</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <style>
+        body {
+            padding: 40px;
+            max-width: 700px;
+        }
+        .has-success input {
+            background-color: #DFD;
+        }
+        .has-error input {
+            background-color: #FDD;
+        }
+        .repo-button {
+            position: relative;
+            top: 10px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body ng-controller="TestController as vm">
+
+    <h1>
+        betsol-ng-skype-name demo
+        <iframe
+            class="repo-button"
+            src="https://ghbtns.com/github-btn.html?user=betsol&repo=ng-skype-name&type=star&size=large"
+            frameborder="0"
+            scrolling="0"
+            width="90px"
+            height="30px"
+        ></iframe>
+    </h1>
+    <hr>
+
+    <form name="form">
+        <div
+            class="form-group"
+            ng-class="{
+                'has-success' : form.skypeName.$valid,
+                'has-error'   : form.skypeName.$invalid
+            }"
+        >
+            <label for="skype-name">Skype Name</label>
+            <input
+                id="skype-name"
+                name="skypeName"
+                class="form-control"
+                type="text"
+                ng-model="vm.skypeName"
+                bs-skype-name
+            >
+                <span class="help-block" ng-show="form.skypeName.$error.skypeName">
+                    Please enter a correct Skype-name in the field above!
+                </span>
+        </div>
+    </form>
+
+    <p>Entered Skype Name: «<strong>{{ vm.skypeName }}</strong>»</p>
+
+    <hr>
+
+    <div class="well">
+        <div class="btn-group" role="group">
+            <button
+                type="button"
+                class="btn btn-default"
+                ng-click="vm.skypeName = '@12345'"
+            >Set to «@12345»</button>
+
+            <button
+                type="button"
+                class="btn btn-default"
+                ng-click="vm.skypeName = 'john.doe-17'"
+            >Set to «john.doe-17»</button>
+
+            <button
+                type="button"
+                class="btn btn-default"
+                ng-click="vm.skypeName = 'john@example.com'"
+            >Set to «john@example.com»</button>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/betsol-ng-skype-name/scripts/betsol-ng-skype-name.js"></script>
+    <script type="application/javascript">
+        (function (angular) {
+            'use strict';
+            angular
+                .module('betsol.skypeName.test', [
+                    'betsol.skypeName'
+                ])
+                .controller('TestController', function () {
+                    var vm = this;
+                    vm.skypeName = '';
+                })
+            ;
+        })(angular);
+    </script>
+
+</body>
+
+</html>
